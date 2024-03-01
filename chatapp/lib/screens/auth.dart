@@ -107,8 +107,8 @@ class _AuthScreenState extends State<AuthScreen> {
                   left: 20,
                   right: 20,
                 ),
-                width: 200,
-                child: Image.asset('assets/images/chat.png'),
+                width: 180,
+                child: Image.asset('assets/images/chat1.png',),
               ),
               Card(
                 margin: const EdgeInsets.all(20),
@@ -183,12 +183,13 @@ class _AuthScreenState extends State<AuthScreen> {
                           if (_isAuthenticating)
                             const CircularProgressIndicator(),
                           if (!_isAuthenticating)
-                            ElevatedButton(
+                            FilledButton(
                               onPressed: _submit,
-                              style: ElevatedButton.styleFrom(
+                              style: FilledButton.styleFrom(
+                                minimumSize: const Size.fromHeight(48.0),
                                 backgroundColor: Theme.of(context)
                                     .colorScheme
-                                    .primaryContainer,
+                                    .primary,
                               ),
                               child: Text(_isLogin ? 'Login' : 'Signup'),
                             ),

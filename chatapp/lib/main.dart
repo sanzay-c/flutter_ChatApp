@@ -3,6 +3,7 @@ import 'package:chatapp/screens/splash.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'firebase_options.dart';
 import 'package:chatapp/screens/auth.dart';
 
@@ -24,6 +25,7 @@ class App extends StatelessWidget {
       theme: ThemeData().copyWith(
         colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(255, 63, 17, 177)),
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: StreamBuilder(
           stream: FirebaseAuth.instance.authStateChanges(),
